@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christine <christine@student.42.fr>        +#+  +:+       +#+        */
+/*   By: cqin <cqin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:31:25 by christine         #+#    #+#             */
-/*   Updated: 2024/02/10 19:49:00 by christine        ###   ########.fr       */
+/*   Updated: 2024/02/15 12:57:29 by cqin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,15 @@ int	Span::shortestSpan()
 	std::sort(_span.begin(), _span.end());
 	int shortest = (_span[1] - _span[0]);
 	int tmp = shortest;
-	for (size_t i = 2; i < _span.size(); i++)
+
+	for (size_t i = 0; i < _span.size(); i++)
 	{
-		tmp = _span[i] - _span[i - 1];
-		if (tmp < shortest)
-			shortest = tmp;
+		for (size_t j = i + 1; j < _span.size(); j++)
+		{
+			tmp = _span[j] - _span[i];
+			if (tmp < shortest)
+				shortest = tmp;
+		}
 	}
 	return (shortest);
 }

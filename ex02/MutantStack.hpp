@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christine <christine@student.42.fr>        +#+  +:+       +#+        */
+/*   By: cqin <cqin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 19:43:06 by christine         #+#    #+#             */
-/*   Updated: 2024/02/10 20:24:38 by christine        ###   ########.fr       */
+/*   Updated: 2024/02/15 13:23:52 by cqin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,35 +27,28 @@ class MutantStack: public std::stack<T>
 
 		MutantStack() : stack()
 		{
-			std::cout << "Default Constructor called" << std::endl;
 		}
 
 		MutantStack(const stack &src) : stack(src)
 		{
-			std::cout << "Copy Constructor called" << std::endl;
 		}
 
-		// Deconstuctor
 		~MutantStack()
 		{
-			std::cout << "Deconstuctor called" << std::endl;
 		}
 
-		// Overloaded opperators
-		stack &operator=(const stack &src)
+		stack &operator=(const stack &autre)
 		{
-			if (*this != src)
-				*this = src;
+			if (*this != autre)
+				*this = autre;
 			return (*this);
 		}
 
-		// begin iterator
 		iterator begin()
 		{
 			return (stack::c.begin());
 		}
 
-		// end iterator
 		iterator end()
 		{
 			return (stack::c.end());

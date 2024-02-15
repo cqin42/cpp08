@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christine <christine@student.42.fr>        +#+  +:+       +#+        */
+/*   By: cqin <cqin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 17:11:00 by christine         #+#    #+#             */
-/*   Updated: 2024/02/10 17:31:02 by christine        ###   ########.fr       */
+/*   Updated: 2024/02/15 12:00:37 by cqin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main ()
 
 	try
 	{
-		it = easyfind(vec, 10);
+		it = easyfind(vec, 15);
 		std::cout << "find it" << std::endl;
 	}
 	catch(const std::exception& e)
